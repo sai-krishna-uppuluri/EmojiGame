@@ -1,0 +1,40 @@
+/* Write your code here. */
+.emoji-inner-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.emoji-card {
+  background-color: aliceblue;
+  height: 150px;
+  width: 150px;
+  margin: 5px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #9796f0;
+}
+
+@media screen and (max-width: 768px) {
+  .emoji-card {
+    height: 130px;
+    width: 80px;
+  }
+}
+
+.emoji-image {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.emoji-name {
+  font-size: 16px;
+  text-align: center;
+  font-family: roboto;
+}
