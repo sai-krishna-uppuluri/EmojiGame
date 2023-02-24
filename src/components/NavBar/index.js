@@ -2,7 +2,7 @@
 import './index.css'
 
 const Navbar = props => {
-  const {currentScore, topScore} = props
+  const {currentScore, topScore, isGameInProgress} = props
 
   return (
     <div className="nav-container">
@@ -11,12 +11,14 @@ const Navbar = props => {
           src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
           alt="emoji logo"
         />
-        <h1>Emoji</h1>
+        <h1>Emoji Game</h1>
       </div>
-      <div className="score-container">
-        <h2 className="score-nav">Score {currentScore}</h2>
-        <h2 className="score-nav">Total Score {topScore}</h2>
-      </div>
+      {isGameInProgress ?? (
+        <div className="score-container">
+          <p className="score-nav">Score: {currentScore}</p>
+          <p className="score-nav">Top Score: {topScore}</p>
+        </div>
+      )}
     </div>
   )
 }

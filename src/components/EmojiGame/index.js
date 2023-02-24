@@ -102,7 +102,11 @@ class EmojiGame extends Component {
     const {clickedEmojiList, topScore, isGameInProgress} = this.state
     return (
       <div className="app-container">
-        <Navbar currentScore={clickedEmojiList.length} topScore={topScore} />
+        <Navbar
+          currentScore={clickedEmojiList.length}
+          topScore={topScore}
+          isGameInProgress={isGameInProgress}
+        />
         <div className="emoji-game-body">
           {isGameInProgress ? this.getEmojisList() : this.renderScoreCard()}
         </div>
